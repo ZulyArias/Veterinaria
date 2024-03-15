@@ -1,0 +1,129 @@
+/* general */
+* {
+    margin: 0;
+    font-family: "Madimi One", sans-serif;
+}
+
+
+/* primera seccion */
+#entrada {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./imgs/primera.png);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.boton {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.filtroDIV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* formulario */
+
+/* estilos pad */
+.pad {
+    padding: 1rem;
+}
+
+/* estilos content */
+.content {
+    background-color: rgba(164, 211, 255, 0.863);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* estilos label */
+label {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: .5rem;
+}
+
+
+/* estulos input */
+input {
+    width: 100%;
+    padding: .375rem .75rem;
+    margin: 2%;
+    line-height: 1.5;
+    color: #212529;
+    background-color: rgb(241, 241, 241);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 80%;
+}
+
+input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* estilos boton */
+input[type="submit"] {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #00438a;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+
+/* estilos campos */
+.campos {
+    width: 100%;
+    background-color: rgb(198, 228, 255);
+    margin: 15% 0;
+    border: 2.5px solid #00438a;
+    border-radius: 15px;
+}
+
+/* estilos tablas de columnas*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th {
+    background-color: #00438a;
+    color: white;
+    padding: .75rem;
+    text-align: center;
+}
+
+td {
+    padding: .75rem;
+    text-align: center;
+}
