@@ -85,7 +85,7 @@ function agendar() {
     actualizarCards();
 
     // Limpiar el formulario después de agregar la cita
-    document.getElementById('exampleModal').querySelector('form').reset();
+    limpiar();
 
     // Cerrar el modal y mostrar mensaje de éxito
     const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
@@ -96,12 +96,27 @@ function agendar() {
         title: 'Éxito',
         text: 'La cita ha sido agregada exitosamente'
     });
+    
 
     // Ocultar el mensaje de éxito después de 2 segundos
     setTimeout(function() {
         Swal.close();
     }, 2000);
+    return;
 }
+
+// funcion para limpiar el formulario
+function limpiar() {
+    document.getElementById('Nmascota').value = '';
+    document.getElementById('Ndueño').value = '';
+    document.getElementById('telefono').value = '';
+    document.getElementById('tipo_mascota').value = '';
+    document.getElementById('Fecha_Consulta').value = '';
+    document.getElementById('hora').value = '';
+    document.getElementById('Nro_Doc').value = '';
+    document.getElementById('estado').value = '';
+}
+
 
 // Función para actualizar las tarjetas de citas
 function actualizarCards() {
@@ -204,6 +219,8 @@ function filtrarCitas() {
                 <p class="card-text">${cita.sintomas}</p>
                 <p class="card-text">${cita.nombreDueño} - ${cita.telefono}</p>
                 <p class="card-text">${cita.estado}</p>
+                <button class="btn btn-danger" onclick="eliminarCita('${cita.nombreMascota}')">Eliminar</button>
+                <button class="btn btn-warning" onclick="editarCita('${cita.nombreMascota}')">Editar</button>
             </div>
         `;
         seccionCarrito.appendChild(card);
